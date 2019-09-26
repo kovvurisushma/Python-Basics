@@ -1,0 +1,15 @@
+#PE 49
+import sympy
+def gen_sequence(LOWER,LIMIT):
+  for i in range(LOWER,LIMIT):
+    if  is_prime_permutation(i):
+      return str(i) + str(i + 3330) + str(i + 6660)
+    
+def is_prime_permutation(num) :
+  if sympy.isprime(num):
+    if sympy.isprime(num + 3330) and sorted(str(num)) == sorted(str(num + 3330)) :
+      if sympy.isprime(num + 6660) and sorted(str(num)) == sorted(str(num + 6660)) :
+        return True
+  return False
+
+gen_sequence(1488,10000)
