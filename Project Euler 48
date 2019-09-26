@@ -1,0 +1,6 @@
+def list_of_self_Powers():
+  return str(sum([x ** x for x in range(1,1001) ]))[-10:]
+
+list_of_self_Powers()
+
+  
