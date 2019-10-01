@@ -1,0 +1,6 @@
+table = "abcdefghijklmnopqrstuvwxyz"
+def wierd_dictionary(l, word):
+  return sum([table.find(word[i]) * (26 ** (l - i - 1 )  ) for i in range(len(word))]) + 1
+l = int(input())
+word = input()
+print(wierd_dictionary(l, word))
