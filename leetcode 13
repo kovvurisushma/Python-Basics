@@ -1,0 +1,17 @@
+dic = {  "IV" : 4 , 'IX' : 9 , 'XL' : 40 , 'XC' : 90 , 'CD' : 400 ,'CM' : 900 ,'I':1, 'V':5,'X' : 10,'L': 50,'C'  :100, 'D':500, 'M':1000}
+def integer2roman(s):
+  intValu = []
+  romanValues = dic.keys()
+  for val in romanValues:
+     if val in s:
+       c = s.count(val)
+       for k in range(c):
+         stringpieces = s.partition(val)
+         s = ""
+         s = stringpieces[0] + stringpieces[-1]
+         intValu.append(val)
+  if s != "":
+    intValu.extend(list(s))
+  print(intValu)
+  return sum([dic[x] for x in intValu])
+integer2roman("MCDLXXVI")
