@@ -1,0 +1,6 @@
+from itertools import groupby as groupby
+s = ["mee","eer","bbc","cbc"]
+li = [''.join(str(len(list(b))) for ch,b in groupby(st)) for st in s]
+tar = ''.join(str(len(list(b))) for ch,b in groupby("bab"))
+res = [s[x] for x in range(len(s)) if li[x] == tar]
+print(res)
