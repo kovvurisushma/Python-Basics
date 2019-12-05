@@ -1,0 +1,15 @@
+from itertools import combinations as p
+def nextPermutation(lis):
+  length = len(lis)
+  tar = list(p(lis,length))
+  #i = tar.index(tuple(lis))
+  '''lis  = ()
+  if i == length - 1:
+    lis = (tar[0])
+  else:
+    lis = tar[i + 1]'''
+  for i in tar:
+    print(i)
+    
+ # print(tar[i + 1])
+nextPermutation([1,3,2])   
